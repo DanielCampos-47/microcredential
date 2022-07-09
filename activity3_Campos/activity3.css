@@ -1,0 +1,151 @@
+*{box-sizing: border-box;} /*to prevent horizontal scrolling*/
+.title{font-family: elephant;font-size: 300%;}
+.intro{font-size: 30px; background-color: purple; text-align: justify;}
+.subtitle{font-size: 0.8em; text-align: right;}
+
+#name1{text-shadow: -10px 0px 2px red;}
+#name2{text-shadow: 0px -10px 2px red;}
+#name3{text-shadow: -10px 10px 2px red;}
+#name4{text-shadow: 10px -10px 2px red;}
+#name5{text-shadow: 10px -10px 5px red;}
+
+.box1, .box2{background-color: purple; height: 100px; width: 500px; box-shadow: 5px 5px 10px black;}
+/*horizontal, vertical, blur, length of shadow, color*/
+.box2{box-shadow: 0px 0px 2px 5px black;}
+.box3, .box4, .box5, .box6, .box7, .box8{width: 200px; height: 100px;}
+.box3{background-color: yellow; margin-bottom: 50px;}
+.box4{background-color: green; margin-left: 100px;}
+.box5{background-color: lightblue; margin: auto;}
+/* margin
+1) all 4 margins
+2) top and bottom, right and left
+3) top, left and right, bottom
+4) clockwise
+*/
+.box6{background-color: gray; margin: 100px}
+.box7{background-color: orange; margin: 100px 300px;}
+.box8{background-color: olive; margin: 200px 100px 300px 50px;}
+
+/*Padding = Space from edge of box to content
+1) all 4 sides
+2) top and bottom, left and right
+3) top, left and right, bottom
+4) clockwise
+*/
+.p1{padding-top: 50px;}
+.p2{padding: 20px 100px;}
+.p3{padding: 50px;}
+.p4{padding: 20px 50px 100px 30px;}
+
+
+.outdoors{background-color: darkgreen; font-size: 300%; text-align: center; padding: 20px 0px; text-shadow: 2px 2px 5px white; width: 90%; box-shadow: 2px 2px 5px black; color: gold; margin: auto;}
+.img_container{
+    border: solid 1px red; width: 90%; margin: auto;
+}
+.image1, .image2, .image3, .image4{width: 45%; margin: 1%;}
+.row1, .row2, .row3{border: solid green;}
+
+/*Image editing*/
+.image1{border-radius: 20px;}
+.image2{border-radius: 50%;} /*circle when image is a square*/
+.image3{border: ridge 20px darkgreen; padding: 10px; background-color: yellow;}
+.image4{box-shadow: 0px 0px 10px 5px brown;}
+.pContent{border: solid gold; width: 50%; float: right; padding: 1em 2em;}
+
+.contact{border: solid gray; background-color: lightgray; display: inline-block; width: 100%;}
+.contact1, .contact2, .contact3{border: solid red; width: 30%; float: left; margin-left: 2%; padding: 1em 2em; text-align: center;}
+
+
+/*COLORS*/
+.g1, .g2, .g3, .g4, .g5, .g6{font-size: 5em; font-family: "Arial Black"}
+.g1, .g4{color: rgb(66, 133, 244);}
+.g2, .g6{color: rgb(233, 59, 44);}
+.g3{color: rgb(251, 188, 5);}
+.g5{color: rgb(52, 168, 83);}
+
+.c1, .c2, .c3, .c4{font-size: 2em; padding: 1em;}
+.c1{background-color: #d32f2f;}
+.c2{background-color: #9a0007;}
+.c3{background-color: #ff6659;}
+.c4{background-color: #445963;}
+
+/*POSITION IN IMAGES*/
+.photo_container{
+    border: ridge 20px gray;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.photo_container img{width: 100%;}
+.photo_p1{text-align: center; font-size: 2em; color: darkgreen; position: absolute; top: 0%; left: 10%; right: 10%; background-color: rgba(237, 67, 53, 0.5);}
+
+.photo_img2{width: 100%;}
+.photo_p2{position: absolute; background-color: rgba(10, 10, 10, 0.8); top: 20%; bottom: 20%; left: 20%; right: 20%; color: lightgray; text-align: center; padding: 1em; font-size: 1.2em;}
+
+.link_p2{display: block; background-color: magenta; margin-top: 1em; padding 0.2em; border-radius: 12px; text-decoration: none;}
+.link_p2:hover{background-color: lightblue; box-shadow: 0px 0px 5px 2px gray;}
+
+/*FILTERS*/
+.blur1, .blur2, .blur3, .sepia1, .sepia2, .sepia3, .invert1, .invert2, .invert3{width: 30%; margin-left: 2%;}
+.blur1{filter: blur(2px);}
+.blur2{filter: blur(10px);}
+.blur3{filter: blur(15px);}
+
+.sepia1{filter: sepia(10%);}
+.sepia2{filter: sepia(60%);}
+.sepia3{filter: sepia(100%)}
+
+.invert1{filter: invert(10%);}
+.invert2{filter: invert(60%);}
+.invert3{filter: invert(100%);}
+
+/*ANIMATIONS*/
+.animation_container{
+    border: ridge 20px gray;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2em;
+    position: relative;
+    overflow: hidden;
+}
+
+.mountain{width: 100%;}
+.bus{
+    width: 20%; position: absolute; bottom: -10%; right: -20%;
+    animation-name: movebus; animation-duration: 5s; animation-iteration-count: 2; animation-delay: 3s; animation-fill-mode: forwards; animation-direction: alternate; animation-timing-function: ease;
+}
+
+@keyframes movebus{
+    from{transform: translateX(0%);}
+    to{transform: translateX(-500%);}
+}
+
+.pokeball{width: 10%; position: absolute; bottom: 0%; left: -10%; animation-name: rotateball; animation-duration: 8s; animation-delay: 13s; animation-fill-mode: forwards; animation-direction: alternate; animation-iteration-count: 2;} 
+
+@keyframes rotateball{
+    0%{transform: rotate(0deg); left: 0%;}
+    100%{transform: rotate(360deg); left: 100%}
+}
+
+.cloud1, .cloud2, .cloud3{position: absolute;}
+.cloud1{width: 10%; top: 0%; left: -10%; animation: moveCloud 15s infinite;}
+.cloud2{width: 15%; top: -10%; left: -5%; animation: moveCloud 10s infinite;}
+.cloud3{width: 20%; top: 10%; left: -15%; animation: moveCloud 8s infinite;}
+
+@keyframes moveCloud{
+    0%{opacity: 0.8; transform: translate(0, 0);}
+    20%{opacity: 1;}
+    40%{opacity: 0.5;}
+    60%{opacity: 0.3; transform: translate(300%, 50%);}
+    80%{opacity: 0.7;}
+    100%{opacity: 0.9; transform: translate(700%, -10%);}
+}
+
+/*TEXT ANIMATION*/
+.animation_p{position: absolute; top: 20%; bottom: 20%; text-align: center; background-color: transparent; left: 10%; right: 10%; font-size: 2em; color: white; animation: zoomTxt 3s alternate 2s forwards;}
+
+@keyframes zoomTxt{
+    0%{transform: scale(0);color: green; text-shadow: 5px 5px 2px black;}
+    50%{transform: scale(2);}
+    100%{transform: scale(0);}
+}
