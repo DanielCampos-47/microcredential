@@ -1,0 +1,72 @@
+*{box-sizing: border-box;}
+.cuerpo{background-color: maroon;}
+
+.anim_contenedor{
+    width: 70%;
+    border: 10px ridge pink;
+    background-color: aqua;
+    margin: auto;
+    /*overflow: hidden;*/
+    position: relative;
+}
+.imagen{width: 100%;
+animation: imagenanim 5s alternate 22s 4 forwards;}
+@keyframes imagenanim{
+    0%, 100%{filter: sepia(0%);}
+    50%{filter: sepia(100%);}
+}
+
+.icono, .texto, .heart1, .heart2, .heart3, .heart4, .heart5, .heart6, .heart7, .heart8, .heart9, .heart10, .heart11, .heart12{position: absolute;}
+
+.icono{top: 40%; width: 20%; left: -20%;    
+animation: moveicono 5s alternate 2s 4 forwards;}
+@keyframes moveicono{
+    from{transform: rotate(0deg) translate(0, 0); left: -20%;}
+    to{transform: rotate(360deg) translate(75%, 20%); left: 100%;}
+}
+
+.texto{font-size: 3em; top: 10%; left: 38%; font-style: oblique;
+animation: movetexto 5s alternate 2s 4 forwards;}
+@keyframes movetexto{
+    0%{transform: scale(1);}
+    50%{transform: scale(2); text-shadow: 5px 5px 5px white; color: gold;}
+    100%{transform: scale(1);}
+}
+
+/*HEARTS*/
+.heart1, .heart2, .heart3, .heart4{width: 20%; opacity: 0%;}
+.heart5, .heart6, .heart7, .heart8{width: 5%; opacity: 0%;}
+.heart9, .heart10, .heart11, .heart12{width: 10%; opacity: 0%;}
+
+.heart1{top: 5%; left: 5%;
+    animation: fadeheart 1s alternate 42s 6 forwards;}
+.heart2{top: 5%; right: 5%;
+    animation: fadeheart 1s alternate 46s 6 forwards;}
+.heart3{bottom: 5%; left: 5%;
+    animation: fadeheart 1s alternate 43s 6 forwards;}
+.heart4{bottom: 5%; right: 5%;
+    animation: fadeheart 1s alternate 45s 6 forwards;}
+
+.heart5{top: 10%; left: 30%;
+    animation: fadeheart 1s alternate 45s 6 forwards;}
+.heart6{top: 10%; right: 30%;
+    animation: fadeheart 1s alternate 43s 6 forwards;}
+.heart7{bottom: 10%; left: 30%;
+    animation: fadeheart 1s alternate 46s 6 forwards;}
+.heart8{bottom: 10%; right: 30%;
+    animation: fadeheart 1s alternate 42s 6 forwards;}
+
+.heart9{top: 25%; left: 25%;
+    animation: fadeheart 1s alternate 43s 6 forwards;}
+.heart10{top: 25%; right: 25%;
+    animation: fadeheart 1s alternate 46s 6 forwards;}
+.heart11{bottom: 25%; left: 25%;
+    animation: fadeheart 1s alternate 44s 6 forwards;}
+.heart12{bottom: 25%; right: 25%;
+    animation: fadeheart 1s alternate 47s 6 forwards;}
+
+@keyframes fadeheart{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+
