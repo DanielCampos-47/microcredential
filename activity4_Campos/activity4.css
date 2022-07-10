@@ -6,7 +6,7 @@
     border: 10px ridge pink;
     background-color: aqua;
     margin: auto;
-    /*overflow: hidden;*/
+    overflow: hidden;
     position: relative;
 }
 .imagen{width: 100%;
