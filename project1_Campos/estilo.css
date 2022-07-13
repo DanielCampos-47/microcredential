@@ -1,0 +1,18 @@
+*{box-sizing: border-box;}
+.cuerpo{
+    background-color: goldenrod;
+    margin: 0;
+    /*
+    background-image: url(images/waterTown.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+}
+
+
+.volcano_container{
+    width: 100%;
+    margin: auto;
+}
+
+.volcano_container img{width: 100%; position: relative;}

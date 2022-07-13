@@ -82,7 +82,10 @@
 .photo_img2{width: 100%;}
 .photo_p2{position: absolute; background-color: rgba(10, 10, 10, 0.8); top: 20%; bottom: 20%; left: 20%; right: 20%; color: lightgray; text-align: center; padding: 1em; font-size: 1.2em;}
 
-.link_p2{display: block; background-color: magenta; margin-top: 1em; padding 0.2em; border-radius: 12px; text-decoration: none;}
+
+
+
+.link_p2{display: block; background-color: magenta; margin-top: 1em; border-radius: 12px; text-decoration: none; padding: 0.2em;}
 .link_p2:hover{background-color: lightblue; box-shadow: 0px 0px 5px 2px gray;}
 
 /*FILTERS*/
@@ -149,3 +152,34 @@
     50%{transform: scale(2);}
     100%{transform: scale(0);}
 }
+
+/*ACTIVITY 3*/
+#activity_header{text-align: center; background-color: lightgray; border: dotted red; text-decoration: underline;}
+.contenedor{
+    border: 20px ridge lightcoral;
+    background-color: black;
+    width: 100%;
+    position: relative;
+    margin-left: auto; margin-right: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.imagen1, .imagen2, .imagen3{width: 30%; margin: 10px;}
+.imagen1{filter: invert(100%);}
+.imagen2{filter: blur(2px);}
+.imagen3{filter: sepia(100%);}
+
+.texto1{position: absolute; background-color: rgba(10, 10, 10, 0.8); color: white; width: 20%; left: 8%; font-size: 1em; border: solid 2px white; margin: 0%; padding: 7px; bottom: 10%;}
+.texto1titulo{font-size: 1.4em; display: block; font-style: italic;}
+
+.texto2{position: absolute; background-color: rgba(265, 265, 265, 0.8); width: 20%; top: 50%; left: 40%; padding-top: 15px; padding-bottom: 15px; box-shadow: 5px 5px 8px white; padding-left: 5px; padding-right: 5px;}
+.texto2titulo{color: red; font-size: 1.4em; display: block;}
+.mapa{display: block; border-radius: 12px; color: white; text-decoration: none;  background-color: red; padding: 5px; display: table; text-align: center; margin: auto;}
+
+.marcus{background-color: transparent; top: 0%; right: 8%; width: 25%; position: absolute; font-size: 1em; text-align: left;}
+.malcom{background-color: transparent; right: 3%; position: absolute; top: 20%; text-align: left; width: 20%;}
+.jordan{position: absolute; background-color: transparent; width: 15%; text-align: left; bottom: 20%; right: 10%;}
+.medio{position: absolute; background-color: transparent; font-size: 2.5em; top: 30%; right: 10%; font-style: bold;}
+
+.autor{font-size: 1em; font-style: italic; display: block;}
