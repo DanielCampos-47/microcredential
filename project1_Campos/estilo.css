@@ -2,17 +2,33 @@
 .cuerpo{
     background-color: goldenrod;
     margin: 0;
-    /*
-    background-image: url(images/waterTown.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    */
 }
 
 
-.volcano_container{
+.bckImg_Container{
     width: 100%;
     margin: auto;
 }
 
-.volcano_container img{width: 100%; position: relative;}
+.bckImg_Container img{width: 100%; position: relative;}
+
+.topBar{
+    position: absolute;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.enlase1, .enlase2, .enlase3, .enlase4, .enlase5{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 19%;
+    border-radius: 15px;
+}
+
+.enlase1:hover{
+    background-color: rgba(265, 265, 265, 0.5)
+}

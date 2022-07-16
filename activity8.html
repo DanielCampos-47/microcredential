@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Daniel Campos - Activity 8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h1>Daniel Campos - Activity 8</h1>
+    <script type="text/javascript">
+
+    //1) no parameters or returned values
+    function msg() {
+        console.log(`Hello`)
+    }
+
+
+    //2) function that prints [3,1], still no returned value
+    function printCount() {
+        for (let i = 3; i >=1; i--) {
+            console.log(i)
+        }
+    }
+
+
+    //3) with parameter, print message. Still no returned value
+    //name = 'Daniel'
+    function greeting(name) {
+        console.log(`Hello ${name}`)
+    }
+    //greeting(name)
+
+
+    //4) msg parameter, transfrom to CAPS. no returned valaue
+    function upperMessage(message) {
+        let upper = message.toUpperCase()
+        console.log(upper)
+    }
+
+
+    //5) two parameters, print message. no returned value
+    function greet(firstName, lastName) {
+        console.log(`Hello ${firstName} ${lastName[0].toUpperCase()}`)
+    }
+
+
+    //6) two parameters, different types => Print, stil no return
+    function printMsg(message, numCounts) {
+        for (let i = 0; i < numCounts; i++) {
+            console.log(`Counter ${i + 1} = ${message}`)
+        }
+    }
+
+
+    //7) parameters that determine printed message
+    function isSnakeEyes(dice1, dice2) {
+        if (dice1 && dice2 === 1) {
+            console.log(`Snake Eyes!`)
+        } else {console.log(`Not Snake Eyes!`)}
+    }
+
+
+    //8) no parameter but returned value
+    function sumXY() {
+        let x = 7, y = -3
+        return x + y
+        //anything after return will not process
+    }
+
+
+    //9) takes number parameter, returns double
+    function doubleNumber(number) {
+        return number*2
+    }
+
+
+    //10) add two numbers and return the sum. save the reurn in a variable
+    let a = 5/9, b = 3, c = 9, d = -5
+    function sumNum(num1, num2) {
+        return num1 + num2
+    }
+    //let number1 = sumNum(7, b)
+
+
+    //11) number parameter w/ boolean return
+    function isShortsWeather(temperature) {
+        if (temperature >= 75) {
+            return true
+        } else {return false}
+    } 
+
+
+    //12) array parameter, return last element or null if empty array
+    function lastElement(arrayInput) {
+        if (arrayInput === undefined) {return null}
+        else if (arrayInput.length !== 0) {
+            return arrayInput[arrayInput.length - 1]
+        } else {return null} 
+    }
+
+    /*
+    //13) Math functions in JS
+    console.log(`PI value = ${Math.PI}`)
+    console.log(`PI rouned is ${Math.round(Math.PI)}`)
+
+    console.log(`PI with Math.ceil() = ${Math.ceil(Math.PI)}`)
+    console.log(`PI with Math.floor() = ${Math.floor(Math.PI)}`)
+    console.log(`PI with Math.trunc() = ${Math.trunc(Math.PI)}`)
+
+    console.log(`Math.pow() = ${Math.pow(2, 3)}`)
+    console.log(`Math.sqrt() = ${Math.sqrt(81)}`)
+
+    console.log(`Random number = ${Math.round(Math.random() * 10)}`)
+    //Math.random return random # in [0,1]
+
+
+
+    //14) random number between [10,20]
+    function pickNum() {
+        let pick = 10 + Math.round(Math.random() * 10)
+        return pick
+    }
+    */
+
+    //15) function that randomly picks an array element
+    let colors = ['red', 'green', 'blue', 'yellow', 'orange']
+    function colorPick() {
+        console.log(`The random color is: ${colors[Math.round(Math.random() * (colors.length - 1))]}`)
+    }
+
+
+    //========== Activity 8 ==========
+    function checkName() {
+        let userName = prompt("Please enter your name")
+        while (userName === null || userName.length === 0 || !isNaN(userName)) {
+            if(userName === null || userName.length === 0) {
+                userName = prompt(`You forgot to enter your name. Enter a name again: `)
+            } else {
+                userName = prompt(`${userName} is invalid! Enter a name again:`)
+            }
+        }
+        console.log(`Welcome to the class ${userName.toUpperCase()}`)
+    }
+
+    function checkNum() {
+        let userNumber = prompt(`Please enter a number`)
+        while (userNumber === null || userNumber.length === 0 || isNaN(userNumber)) {
+            if (userNumber === null || userNumber.length === 0) {
+                userNumber = prompt(`You forgot to enter a number. Enter a number again:`)
+            } else {
+                userNumber = prompt(`${userNumber} is invalid! Enter a number again:`)
+            }
+        }
+        if (userNumber % 2 === 0) {return true}
+        else {return false} 
+    }
+
+    function lottery(numGames) {
+        for (let i = 0; i < numGames; i++) {
+            console.log(`Game #${i + 1} = ${Math.round(Math.random() * 99)}`)
+        }   
+    }
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

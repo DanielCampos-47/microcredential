@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Daniel Campos - Activity 7</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+
+<body>
+    <h1>Daniel Campos - Activity 7</h1>
+    <script type="text/javascript">
+        /*
+        //1) FOR LOOPS
+        for (let i = 0; i <= 10; i += 2) {
+            console.log(`The current number is ${i}`)
+        }
+
+
+        //2) Even numbers from 0 - 100 w/ user input
+        let num = parseInt(prompt("Enter a number between 0 - 90"))
+        for (num ; num < 100; num++) {
+            if (num % 2 === 0) {console.log(num)}
+        }
+
+
+        //3) 100 =>0, decrements of 10, inclusive
+        for (let num = 100; num >= 0; num -= 10) {
+            console.log(num)
+        }
+
+
+        //4) For loops in arrays
+        let cars = ['Mazda', 'Tesla', 'Dodge', 'BMW', 'Porsche']
+        for (let i = 0; i < cars.length; i++) {
+            console.log(`Car ${i + 1} = ${cars[i]}`)
+        }
+
+
+        //5) another for loop method to print array
+        let cars = ['Mazda', 'Tesla', 'Dodge', 'BMW', 'Porsche']
+        for (let eachCar of cars) {
+            console.log(eachCar)
+        }
+
+
+        //6) for loop to print each character in a string
+        let myString = 'Daniel'
+        for (let eachLetter of myString) {
+            console.log(eachLetter)
+        }
+
+
+        //7) Nesting if(condition) in a for loop
+        let foods = ['salad', 'pizza', 'tofu', 'cheese burger']
+        for (let i = 0; i < foods.length; i++) {
+
+            if ((i + 1) % 2 === 0) {
+                console.log(`I want some ${foods[i].toUpperCase()}`)
+            } else {
+                console.log(`I want some ${foods[i]}`)
+            }
+        }
+
+ 
+        //8) for loop in a for loop => [30,0] 10 decrement, 5 times
+        for (let outerCounter = 1; outerCounter <= 5; outerCounter++) {
+            console.log(`OUTER LOOP COUNT \t\t\t ${outerCounter}`)
+
+            for (let innercounter = 30; innercounter >= 0; innercounter -= 10) {
+                console.log(`Inner counter = ${innercounter}`)
+            }
+
+        }
+
+
+        //9) Use a while loop to display [0,4]
+        let initial = 0
+        while (initial <= 4) {
+            console.log(`The current counter is: ${initial}`)
+            initial++  //manually increment
+        }
+
+
+        //10) While loop for user to guess secret number
+        const SECRET = 8
+        let numberUser = parseInt(prompt("Enter a number between 0 and 10"))
+        while (numberUser !== SECRET) {
+            numberUser = parseInt(prompt("WRONG! Guess another number between 0 - 10"))
+        }
+
+
+        //11) break out of a decrementing counter at 9
+        for (let counter = 20; counter >= 0; counter--) {
+            if (counter === 9) {
+                break
+            }
+            console.log(`Counter = ${counter}`)
+        }
+
+
+        //12) let user pick what number to skip from [0,10]
+        let userPick = parseInt(prompt("Enter a number between 0 and 10"))
+        for (let counter = 0; counter <= 10; counter++) {
+            if (counter === userPick) {continue} //skip rest of current iteration
+            console.log(`Counter = ${counter}`)
+        }
+        */
+
+        // =====  ACTIVITY 7  =====
+        let userNumber = prompt("Enter a number between 1 and 10")
+        while (userNumber < 1 || userNumber > 10 || isNaN(userNumber)) {
+
+            if (isNaN(userNumber)) {
+                userNumber =  prompt(`${userNumber} is not a number. Enter a number again:`)
+            } else if (userNumber < 1) {
+                userNumber =  prompt(`${userNumber} is less than 1. Enter a number again:`)
+            } else if (userNumber > 10) {
+                userNumber =  prompt(`${userNumber} is greater than 10. Enter a number again:`)
+            }
+        }
+        console.log(`You entered ${userNumber}`)
+
+        for (userNumber; userNumber <= 20; userNumber++) {
+            console.log(userNumber)
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
