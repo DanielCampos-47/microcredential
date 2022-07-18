@@ -9,8 +9,20 @@
     width: 100%;
     margin: auto;
 }
-
 .bckImg_Container img{width: 100%; position: relative;}
+
+.bckImg_Container figcaption{
+    text-align: center;
+    font-style: italic;
+    font-size: 2em;
+    animation: moveQuestion 4s linear 0s infinite normal forwards;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@keyframes moveQuestion{
+    0%{transform: scale(0);}
+    50%{transform: scale(1);}
+    100%{transform: scale(0);}
+}
 
 .topBar{
     position: absolute;
@@ -21,14 +33,256 @@
     width: 100%;
 }
 
+
 .enlase1, .enlase2, .enlase3, .enlase4, .enlase5{
     text-decoration: none;
     color: white;
     display: inline-block;
     width: 19%;
     border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+/*HOVER FOR TOP LINKS*/
 .enlase1:hover{
-    background-color: rgba(265, 265, 265, 0.5)
+    background-color: rgba(0, 99, 65, 0.5);
 }
+.enlase2:hover{
+    background-color: rgba(265, 265, 265, 0.5);
+    color: black;
+}
+.enlase3:hover{
+    background-color: rgba(139, 69, 19, 0.5);
+}
+.enlase4:hover{
+    background-color: rgba(265, 265, 265, 0.5);
+    color: black;
+}
+.enlase5:hover{
+    background-color: rgba(200, 16, 46, 0.5);
+}
+
+
+
+
+.menuBody{
+    background-color: lightgrey;
+    width: 100%;
+}
+
+/*===== The Nature =====*/
+.menuBody h1{
+    color: rgb(0, 99, 65);
+    font-size: 2em;
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: shineHeader 2s linear 0s infinite normal forwards;
+}
+@keyframes shineHeader{
+    0%{text-shadow: none;}
+    50%{text-shadow: 0 0 7px red;}
+    100%{text-shadow: none;}
+}
+
+
+
+.natureParagraph{
+    margin-left: 20px; margin-right: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.natureContainer{
+    width: 100%;
+    border: 10px ridge lightgoldenrodyellow;
+    background-color: goldenrod;
+    margin-left: auto; margin-right: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.nature1, .nature2, .nature3{width: 30%;}
+.nature1:hover{
+    filter: blur(2px);
+}
+.nature2:hover{
+    filter: sepia(50%);
+}
+.nature3:hover{
+    filter: invert(100%);
+}
+
+.lugares{margin-left: 20px; font-size: 1.25em;}
+
+.toTop{
+    color: black;
+    background-color: goldenrod;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.toTop:hover{box-shadow: 5px 5px 5px black;}
+
+
+
+/*===== The Culture =====*/
+.menuBody h2{
+    color: rgb(200, 16, 46);
+    font-size: 2em;
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: shineHeader2 2s linear 0s infinite normal forwards;
+}
+@keyframes shineHeader2{
+    0%{text-shadow: none;}
+    50%{text-shadow: 0 0 7px darkgreen;}
+    100%{text-shadow: none;}
+}
+
+.cultureContainer{
+    width: 100%;
+    border: 10px ridge lightgoldenrodyellow;
+    background-color: goldenrod;
+    margin-left: auto; margin-right: auto;
+    display: inline-block;
+    text-align: center;
+}
+.cultureParagraph{margin-left: 20px; margin-right: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.culture1, .culture2, .culture3, .culture4, .culture5{
+    width: 19%;
+}
+
+
+
+
+.contactArea{
+    width: 100%;
+    display: inline-block;
+    background-color: goldenrod;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+.contactCol1, .contactCol2, .contactCol3{width: 30%; float: left; margin-left: 20px;}
+
+.designedBy{font-size: .75em;}
+.iPhone, .iMail{
+    width: 5%;
+}
+
+.socialMedia{
+    display: inline-block;
+}
+.media1, .media2, .media3{width: 10%; float: left; margin-left: 20px;}
+
+
+
+
+
+/*     ===== ACTIVITIES =====     */
+.cuerpo2{
+    background-color: goldenrod;
+}
+.cuerpo2 h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.toMenu{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.toMenu:hover{box-shadow: 5px 5px 5px black;}
+
+
+
+
+.cenoteContainer{
+    display: inline-block;
+    width: 100%;
+    margin-left: auto; margin-right: auto;
+}
+.cenote{float: left; width: 20%;}
+.cenoteContainer figcaption{margin-left: 20px; margin-right: 20px; font-size: 1.5em;}
+.cenoteTitle{display: block; font-size: 2em;}
+
+
+.monarchContainer{
+    display: inline-block;
+    width: 100%;
+    margin-left: auto; margin-right: auto;
+}
+.butterfly{float: right; width: 30%;}
+.monarchContainer figcaption{margin-left: 20px; margin-right: 20px; font-size: 1.5em;}
+.monarchTitle{display: block; font-size: 2em;}
+
+
+.muerteContainer{
+    display: inline-block;
+    width: 100%;
+    margin-left: auto; margin-right: auto;
+}
+.muerte{float: left; width: 30%;}
+.muerteContainer figcaption{margin-left: 20px; margin-right: 20px; font-size: 1.5em;}
+.muerteTitle{display: block; font-size: 2em;}
+
+.toTop2{
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.toTop2:hover{box-shadow: 5px 5px 5px black;}
+
+.contactArea2{
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+/*     ===== FOOD =====     */
+.cuerpo3{
+    background-color: goldenrod;
+}
+.cuerpo3 h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.foodContainer{
+    width: 100%;
+    margin: auto;
+}
+.foodContainer img{width: 100%;}
+
+.foodListContainer{
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    margin-left: auto; margin-right: auto;
+}
+.foodList1, .foodList2, .foodList3{width: 30%; float: left;}
+
+
