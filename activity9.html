@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Daniel Campos: Activity 9</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h1>Daniel Campos: Activity 9</h1>
+    <script type="text/javascript">
+
+        //1) Updates global variable within function
+        let msg = `This is an outside message`
+        function displayMsg() {
+            msg = `Hello World! I'm inside of a function`
+            console.log(msg)
+        }
+        console.log(msg)
+
+        //1b) Automatically referrs to global if local of same name hasn't been made
+        let msg1 = `This is an outside message`
+        function displayMsg1() {
+            console.log(`function message ${msg1}`)
+        }
+        console.log(`After function ${msg1}`)
+
+
+
+        //2) var was updated to let b.c. it confuses global with local variables
+        var fullmoon = true;
+        var species = `human`
+        if (fullmoon) {
+            var species = `warewolf`
+            console.log(`Lupin is currently a ${species}`)
+        }
+        console.log(`Lupin is a ${species} outside of the if-statement`)
+
+
+
+        //3) save a function in a variable!
+        const sum = function(num1, num2) {
+            return num1 + num2
+        }
+
+        //3b) defining our own square function
+        let square = function(num) {
+            return Math.pow(num, 2)
+        }
+
+
+
+        //4) function that will run the function rolldice() twice
+        function rolldice() {
+            return Math.floor(Math.random() * 6) + 1
+        }
+        function callTwice(dice){
+            console.log(dice())
+            console.log(dice())
+        }
+
+
+
+        //5) returning functions
+        function makeBetweenFunc(min, max) {
+            return function(num) {
+                return num >= min && num <= max
+            }
+        }
+        //let number = makeBetweenFunc(3,12) => number(20) === false
+
+
+
+        //6) create methods for the object myMath
+        const myMath = {
+            square: function(num) {return num * num},
+            double: function(num) {return num * 2},
+            add (num1, num2) {return num1 + num2}
+        }
+        //myMath.double(25)
+
+
+
+        //7) object square with methods area and perimeter
+        const squareFig = {
+            area (side) {return side * side},
+            perimeter (side) {return side * 4}
+        }
+
+
+
+        //8) object but w/ methods that hold accessible data
+        const cat = {
+            name: `Mickey`,
+            color: `white and black spots!`,
+            breed: `unknown`,
+            meow () {console.log(`${this.name} MEOW MEOW MEOW`)}
+ 
+        }
+
+
+
+        //9) object hen w/ 
+        const hen = {
+            name: `Helen`,
+            eggCount: 0,
+            layAnEgg () {this.eggCount++; return `EGG! Egg count = ${this.eggCount}`}
+        } 
+
+
+
+        // Try and Catch =/= If and else
+        let hello = `Hey There!`
+        try{
+            console.log(hello.toUpperCase())
+        } catch {
+            console.log(`ERROR!!`)
+        }
+        console.log(`After Try and Catch!`)
+
+        //10)
+        console.log(`Example 10) Try and Catch`)
+        function yell (message) {
+            try {
+                console.log(message.toUpperCase().repeat(3))
+            } catch {
+                console.log(`Please pass a string next time!`)
+            }
+        }
+
+
+
+        //11) default parameters in functions
+        console.log(`Example 11) Default Parameters`)
+        function rollDice(numSides = 6) {  //method of setting default parameter values
+            return Math.floor(Math.random() * numSides) + 1
+        }
+
+
+
+        //12) SPREAD ...
+        console.log(`Example 12) Spread...`)
+        let nums = [-9, 20, -13, 8, 6]
+        let greatest = Math.max(...nums)
+        let lowest = Math.min(...nums)
+
+        let animal = [`dog`, `cat`, `fish`]
+        let copyAnimal = [...animal]
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
