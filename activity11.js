@@ -1,4 +1,14 @@
 
+
+
+
+
+
+
+
+
+
+
 //   EXAMPLE 14
 const sBubble = document.querySelector(`.sBubble`)
 const pBubble = document.querySelector(`.pBubble`)
@@ -15,7 +25,6 @@ aBubble.addEventListener(`click`, function (e) {
     e.stopPropagation()
     alert(`LINK was clicked!`)
 })
-
 
 
 

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Daniel Campos - Activity 14: JQuery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style media="screen">
+        .pBackground {background-color: orange; font-size: 1.5em;}
+        #addClass, #removeClass, #toggleClass {padding: 0.5em 1em; margin: 1em; background-color: green; color: lightgrey; border-radius: 12px;}
+        .container {border: inset 10px gray; width: 300px; height: 200px;}
+
+        /*      EXAMPLE OF DBCLICK, RESIZE, and HOVER EVENTS      */
+        .circle {
+            width: 200px; height: 200px; background-color: purple; padding: 3em; text-align: center; border-radius: 50%; margin: 3em; font-size: 1.1em;
+        }
+        .rectangle{
+            border-radius: 0%; background-color: yellow; border: dashed 10px olive;
+        }
+
+
+
+
+
+
+        /*      ACTIVITY 14      */
+        .rgbCircle {
+            width: 200px; height: 200px; background-color: purple; padding: 3em; text-align: center; border-radius: 50%; margin: 3em; font-size: 1.1em; display: inline-block;
+        }
+        .cAfterText {
+            display: none;
+        }
+
+        .rgbRectangle {
+            width: 200px; height: 200px; background-color: purple; padding: 3em; text-align: center; margin: 3em; font-size: 1.1em; display: inline-block;
+        }
+        .rAfterText{
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!--      ACTIVITY 14      -->
+    <div class="rgbCircle" id="rgbCircle">
+        <p id="cBeforeText">Touch Me!</p>
+        <p class="cAfterText" id="cAfterText">The mouse leaves the circle <span id="circleDisplayCtr">0</span> times</p>
+    </div>
+
+    <div class="rgbRectangle" id="rgbRectangle">
+        <p id="rBeforeText">Click Me!</p>
+        <p class="rAfterText" id="rAfterText">The square was clicked <span id="rectangleDisplayCtr">0</span> times</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--      EXAMPLE OF DBCLICK, RESIZE, and HOVER EVENTS      -->
+    <div class="circle" id="circle">
+        Mouse over to see the hover event. Also try to double-click or resize the browser window
+    </div>
+
+
+
+    <!--      CLICKEVENT EXAMPLE      -->
+    <button id="addClass">ADD</button>
+    <button id="removeClass">REMOVE</button>
+    <button id="toggleClass">TOGGLE</button>
+    <div class="container"></div>
+
+
+
+    <!--      jQUERY SELETORS      -->
+    <h1>Basic jQuery selectors</h1>
+    <section id="content">
+        <p>Selctors are used to select content within a web page</p>
+        <p>They user a very CSS-like syntax</p>
+        <ul id="list1">
+            <h3>Fruits:</h3>
+            <li class="a">Apples</li>
+            <li class="a">Oranges</li>
+            <li class="b">Grapes</li>
+            <li class="b">Strawberries</li>
+        </ul>
+        <div id="example">
+            <p class="a">Paragraph 1</p>
+            <p id="para1">Paragraph 2</p>
+            <p class="b">Paragraph 3</p>
+            <p id="para4">Paragraph 4</p>
+            <p id="para5">Paragraph 5</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+                                                                                                                                    <!--      JAVASCRIPT      -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //   ACTIVITY 14
+
+            //   defining our functions
+            $(function () {
+                $(`#rgbCircle`).mouseout(mouseLeavesCircle)
+                $(`#rgbRectangle`).click(mouseClicksRectangle)
+            })
+
+
+            //   writing out our functions
+            let circleCounter = 0
+            function mouseLeavesCircle () {
+                $(`#cBeforeText`).css('display', 'none')
+                $(`#cAfterText`).css('display', 'inline-block')
+                $(`#cAfterText`).css('background-color', 'rgba(0, 0, 0, 0)')
+
+                const r = Math.floor(Math.random() * 256)
+                const g = Math.floor(Math.random() * 256)
+                const b = Math.floor(Math.random() * 256)
+                $(`#rgbCircle`).css(`background-color`, "rgb("+r+","+g+","+b+")")
+
+                circleCounter++
+                document.getElementById('circleDisplayCtr').innerHTML = circleCounter
+            }
+
+            let rectangleCounter = 0
+            function mouseClicksRectangle () {
+                $(`#rBeforeText`).css('display', 'none')
+                $(`#rAfterText`).css('display', 'inline-block')
+                $(`#rAfterText`).css('background-color', 'rgba(0, 0, 0, 0)')
+
+                const r = Math.floor(Math.random() * 256)
+                const g = Math.floor(Math.random() * 256)
+                const b = Math.floor(Math.random() * 256)
+                $(`#rgbRectangle`).css(`background-color`, "rgb("+r+","+g+","+b+")")
+
+                rectangleCounter++
+                document.getElementById('rectangleDisplayCtr').innerHTML = rectangleCounter
+            }
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+            //   EXAMPLE OF DBCLICK, RESIZE, and HOVER EVENTS
+            $(function () {
+                $(`#circle`).dblclick(fnDoubleClick);
+                $(`#circle`).hover(fnHover)
+                $(window).resize(fnResize)
+            })
+            function fnDoubleClick () {
+                $(`#circle`).toggleClass('rectangle')
+                $(`#circle`).html('<h3>Double-click event</h3>')
+            }
+            function fnHover () {
+                $(`#circle`).toggleClass('rectangle')
+                $(`#circle`).html('<h3>Hover event</h3>')
+            }
+            function fnResize () {
+                $(`#circle`).toggleClass('rectangle')
+                $(`#circle`).html('<h3>Resize browser window event</h3>')
+            }
+
+
+
+
+
+            //   MOUSE EVENT: OVER and LEAVE
+            $(`.container`).on('mouseover', mouseEffect)
+            function mouseEffect () {
+                $(`.container`).toggleClass('pBackground')
+            }
+
+            //   CLICK EVENT: ADD and REMOVE and TOGGLE CLASS
+            $(`#addClass`).click(function () {
+                $(`.container`).addClass('pBackground')
+            })
+            $(`#removeClass`).click(function () {
+                $(`.container`).removeClass('pBackground')
+            })
+            $(`#toggleClass`).click(function () {
+                $(`.container`).toggleClass('pBackground')
+            })
+
+
+
+
+
+            //   BEFORE and AFTER
+            $(`#example`).before('/*/*/*/*/*/* BEFORE /*/*/*/*/*/*')
+            $(`#example`).after('/*/*/*/*/*/* AFTER /*/*/*/*/*/*')
+
+            //   APPEND
+            $(`#para4`).prepend(` HEY THERE! `)
+            $(`#para4`).append(` NEW CONTENT! `)
+
+            //   CHANGE CONTENT OF AN ELEMENT
+            $(`#para5`).html("<p>HELLO WORLD!<p>")
+
+            //   DOM tree selector
+            let elem = $(`#para1`)
+            elem.prev().css(`border`, `10px dotted blue`)
+
+            //   ADVANCED FILTER SELECTOR
+            $("p:contains('3')").css({'border':'gray dashed 5px', 'font-family':'monotype corsiva'})
+
+            //   DESCENDANT SELECTOR
+            $(`div > p:odd`).css(`background-color`, `orange`)
+            $(`ul + div`).css(`border`, `ridge olive 10px`)
+
+            //   EXAMPLE 1
+            $(`#para1`).css(`border`, `3px solid red`)
+            //   CLASSES
+            $(`.a`).css({'color':'magenta', 'padding':'0.5em 1em', 'background-color':'yellow'})
+        })
+
+    </script>
+</body>
+</html>

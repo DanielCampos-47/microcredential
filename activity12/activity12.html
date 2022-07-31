@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Daniel Campos - Activity 12</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='activity12.css'>
+</head>
+
+<body>
+
+    <!--   MAIN TITLE & 3 LINKS   -->
+    <h1 class="mainTitle">Four Seasons</h1>
+    <nav class="nav">
+        <a href="https://www1.nyc.gov/" target="_blank">NYC</a>
+        <a href="https://www.cuny.edu/" target="_blank">CUNY</a>
+        <a href="https://www.qcc.cuny.edu/" target="_blank">QCC</a>
+    </nav>
+    <!--   DYNAMIC CARDS  +   MODAL WINDOW LINK   -->
+    <section class="cardContainer">
+        <!--   CARD 1   -->
+        <div class="card">
+            <img src="images/buck.jpg" alt="image of a buck" >
+            <h3>Winter</h3>
+            <p>Bucks love eating dead bark off of dead trees in the winter</p>
+            <a id="openItem1">ADD TO CART</a>
+        </div>
+
+        <!--   CARD 2   -->
+        <div class="card">
+            <img src="images/berries.jpg" alt="image of berries" >
+            <h3>Winter</h3>
+            <p>Bucks love eating dead bark off of dead trees in the winter</p>
+
+        </div>
+
+        <!--   CARD 3   -->
+        <div class="card">
+            <img src="images/forest.jpg" alt="image of a forest" >
+            <h3>Winter</h3>
+            <p>Bucks love eating dead bark off of dead trees in the winter</p>
+
+        </div>
+
+        <!--   CARD 4   -->
+        <div class="card">
+            <img src="images/tiger.jpg" alt="image of a tiger" >
+            <h3>Winter</h3>
+            <p>Bucks love eating dead bark off of dead trees in the winter</p>
+
+        </div>
+    </section>
+
+
+
+
+
+    <br>
+    <hr>
+
+
+
+
+
+
+
+
+    <!--   FORMS   -->
+    <form>
+        <hr>
+        <!--   USERNAME & PASSWORD   -->
+        <input type="text" maxlength="20" placeholder="Up to 20 characters" value="" name="username" class="input2">
+
+        <input type="password" name="password" value="" placeholder="Up to 8 characters" maxlength="8" id="myPassword">
+        <a id="viewPassword">View Password</a>
+
+
+
+
+        <!--Example 4 : CHECKBOX   -->
+        <h3>Select your favorite animal</h3>
+        <!--   LABEL LINKED BY ID   -->
+        <label for="cat">Cats</label>
+        <input type="checkbox" name="animals" value="cat" id="cat">
+        <br>
+        <!--   WRAP LINK INSTEAD OF 'LABEL FOR = '   -->
+        <label>Dog <input type="checkbox" name="animals" value="dog"></label>
+
+
+
+
+        <!--Example 5 : RADIO   -->
+        <!--   NAME IS USED TO GROUP INPUTS?   -->
+        <h3>Select a gender</h3>
+        <label>Female <input type="radio" name="gender" value="female"></label>
+        <label>Male <input type="radio" name="gender" value="male"></label>
+        <label>Others <input type="radio" name="gender" value="others"></label>
+    </form>
+
+    <hr>
+
+    <!--   Example 6 : search bar to external website & date -->
+    <form action="https://www.google.com/search">
+        <input type="search" name="q" placeholder="Type your search">
+        <button>Search Google</button>
+    </form>
+    <form action="https://www.youtube.com/results">
+        <input type="search" name="search_query" placeholder="Type your search">
+        <button>Search YouTube</button>
+    </form>
+
+
+    <!--date-->
+    <label for="date">Select appointment date:</label>
+    <input type="date" name="appointment" value="" id="date">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--   SLIDESHOW   -->
+    <h1>MANUAL SLIDESHOW</h1>
+    <section class="container_slideshow">
+        <div class="slide">
+            <img src="images/buck.jpg">
+            <p>Buck</p>
+        </div>
+        <div class="slide">
+            <img src="images/berries.jpg">
+            <p>Berries</p>
+        </div>
+        <div class="slide">
+            <img src="images/forest.jpg">
+            <p>Forest</p>
+        </div>
+        <div class="slide">
+            <img src="images/tiger.jpg">
+            <p>Tiger</p>
+        </div>
+
+        <a class="prev">&#10094</a>
+        <a class="next">&#10095</a>
+    </section>
+
+
+    <!--   AUTOMATIC SLIDESHOW   -->
+    <section class="container_slideshow">
+        <div class="slideAuto">
+            <img src="images/buck.jpg">
+            <p>Buck</p>
+        </div>
+        <div class="slideAuto">
+            <img src="images/berries.jpg">
+            <p>Berries</p>
+        </div>
+        <div class="slideAuto">
+            <img src="images/forest.jpg">
+            <p>Forest</p>
+        </div>
+        <div class="slideAuto">
+            <img src="images/tiger.jpg">
+            <p>Tiger</p>
+        </div>
+    </section>
+
+
+
+    <!--   EXAMPLE   -->
+    <h1>Daniel Campos</h1>
+    <section class="container">
+        <header class="title">
+            TITLE
+        </header>
+
+        <main class="intro">
+            INTRODUCTION
+        </main>
+
+        <footer class="footer">CONTACT US</footer>
+    </section>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--   MODAL 1   -->
+    <form action="sentForm.html" id="myForm" method="post">
+        <section class="modalWindow">
+            <div class="modalBody">
+
+                <header class="modalHeader"><a href="#" id="closeModal">X</a></header>
+
+                <main class="modalInfo">PRODUCT INFORMATION <br><br>
+                    <label for="firstN">First Name: <input type="text" name="firstName" id="firstN"></label>
+                    <label for="lastN">Last Name: <input type="text" name="lastName" id="lastN"></label>
+                </main>
+
+                <footer class="modalFooter"><input type="submit" value="SUBMIT" class="input1"></footer>
+                
+            </div>
+        </section>
+    </form>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="activity12.js"></script>
+</body>
+</html>
