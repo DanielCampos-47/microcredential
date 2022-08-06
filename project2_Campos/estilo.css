@@ -2,6 +2,8 @@
 html{scroll-behavior: smooth;}
 body {margin: 0%;}
 
+
+
 /*+++++++++++++++++++   INDEX HEADER   +++++++++++++++++++*/
 /*==   INDEX HEADER   ==*/
 #indexHeader {
@@ -45,6 +47,7 @@ body {margin: 0%;}
     border-radius: 4px;
     padding: 2px;
 }
+
 
 
 
@@ -93,16 +96,38 @@ body {margin: 0%;}
 
 
 
+
+/*+++++++++++++++++++   INDEX HAMBURGER   +++++++++++++++++++*/
+#hamburgerBar {
+    background-color: rgb(45, 145, 245);
+    border-top: #002245 1px solid;
+    display: none;
+}
+#hamburgerBar img {
+    display: inline;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    margin: 3px;
+    background-color: white;
+    padding: 1px;
+    border-radius: 100%;
+}
+
+
+
+
 /*+++++++++++++++++++   INDEX NAV ICONS   +++++++++++++++++++*/
 #indexiconNav {
     background-color: rgb(230, 230, 230);
     display: flex; justify-content: space-around;
     flex-flow: wrap;
+    border-top: rgb(45, 145, 245) solid 1px;
+    border-bottom: rgb(45, 145, 245) solid 1px;
 }
 
 #indexiconNav a {
     display: inline-block;
-    border-radius: 10px;
     /* making index icons same width*/
     width: 100px;
     text-decoration: none;
@@ -136,41 +161,56 @@ body {margin: 0%;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*+++++++++++++++++++   INDEX SLIDE HAT   +++++++++++++++++++*/
 #indexslideTop {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     background-color: #002245;
+    border-bottom: rgb(45, 145, 245) solid 1px;
 }
 #indexslideTop p {
     margin: 0%;
     padding: 2px;
 }
-
-
-
-#indextopSlide img{
-    width: 100%;
+#indexslideTop a {
+    text-decoration: underline;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+
+
+/*+++++++++++++++++++   INDEX SLIDE   +++++++++++++++++++*/
+#indexslideShow {
+    width: 100%;
+    position: relative;
+}
+#indexSlide {
+    display: none;
+    width: 100%;
+    animation: indexslideAnimation 1s;
+}
+@keyframes indexslideAnimation {
+    0%{transform: translateX(100px);}
+    100%{transform: translate(0px);}
+}
+#indexSlide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -266,11 +306,22 @@ body {margin: 0%;}
 /*+++++++++++++++++++   600px RESPONSIVE : INDEX NAV GONE => HAMBURGER   +++++++++++++++++++*/
 @media only screen and (max-width: 600px) {
 
+    /*   dissapear nav for hamburger   */
     #indexiconNav {
         display: none;
     }
+    /*   hamburger   */
+    #hamburgerBar {
+        display: block;
+    }
 
+    /*   index navy blue August Clearance   */
+    #indexslideTop {
+        border-top: rgb(45, 145, 245) solid 1px;
+    }
     #indexslideTop p {
         font-size: 0.8em;
     }
+
+
 }

@@ -60,6 +60,17 @@ viewPassword.addEventListener(`click`, function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 //   AUTOMATIC SLIDESHOW
 const slidesAuto = document.querySelectorAll(`.slideAuto`)
 let indexSlide = 0
@@ -69,7 +80,8 @@ function slideshowAuto () {
     let numberSlides = slidesAuto.length
     if (indexSlide >= numberSlides) {indexSlide = 0}
     if (indexSlide < 0) {indexSlide = numberSlides -1}
-    //hiding images, displaying first
+
+    //hiding images, displaying select index
     for (let eachIndex = 0; eachIndex < numberSlides; eachIndex++) {
         slidesAuto[eachIndex].style.display = `none`
     }
@@ -78,6 +90,20 @@ function slideshowAuto () {
     setTimeout(slideshowAuto, 3000) //second * 1000. Keeps calling itself
     indexSlide++
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
