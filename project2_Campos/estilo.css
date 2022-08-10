@@ -5,7 +5,26 @@ body {margin: 0%;}
 
 
 /*+++++++++++++++++++   INDEX HEADER   +++++++++++++++++++*/
+
+/*==  TO TOP BUTTON  ==*/
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
 /*==   INDEX HEADER   ==*/
+
 #indexHeader {
     height: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -55,6 +74,7 @@ body {margin: 0%;}
 #indexTop {
     height: 125px;
     position: relative;
+    background-color: white;
 }
 
 #indexLogo {
@@ -136,6 +156,7 @@ body {margin: 0%;}
     box-shadow: 2px 2px 5px black;
     border-bottom: black solid 1px;
     background-color: rgb(45, 145, 245);
+    border-radius: 5px;
 }
 
 #indexiconNav figure {
@@ -143,10 +164,10 @@ body {margin: 0%;}
     margin: 5px 0px;
 }
 #indexiconNav img {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     padding-top: 2px;
-    /*   centerin icons   */
+    /*   centering all icons   */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -183,11 +204,30 @@ body {margin: 0%;}
 
 
 /*+++++++++++++++++++   INDEX SLIDE   +++++++++++++++++++*/
+
+#buttonLeft, #buttonRight {
+    position: absolute;
+    background-color: rgba(265, 265, 265, 0.4);
+    width: 25px;
+    height: 25px;
+    top: 40%;
+    margin: 5px;
+}
+#buttonLeft {
+    left: 0px;
+}
+#buttonRight {
+    right: 0px;
+}
+#buttonLeft:hover, #buttonRight:hover {
+    background-color: rgba(265, 265, 265, 0.8);
+}
+
 #indexslideShow {
     width: 100%;
     position: relative;
 }
-#indexSlide {
+.indexSlide {
     display: none;
     width: 100%;
     animation: indexslideAnimation 1s;
@@ -196,9 +236,217 @@ body {margin: 0%;}
     0%{transform: translateX(100px);}
     100%{transform: translate(0px);}
 }
-#indexSlide img {
+.indexSlide img {
     width: 100%;
     vertical-align: middle;
+}
+
+
+
+
+/*+++++++++++++++++++   INDEX NAV IMAGES CONTAINER   &    BANNERS  +++++++++++++++++++*/
+#indexbannerTag {
+    text-align: center;
+    font-family: Work Sans, Roboto, sans-serif;
+    color: white;
+    font-style: italic;
+    background-color: #002245;
+    margin: 0%;
+    padding: 5px 0px;
+}
+#indexBanner, .wideBanner {
+    width: 100%;
+}
+
+#indexsmallbannerContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+#indexsmallbannerContainer a {
+    width: 80%;
+}
+#indexsmallBanner {
+    width: 100%;
+}
+
+
+/*   PERSONALIZED   */
+#personContainer {
+    width: 80%;
+    margin: 10px auto;
+    background-color: rgb(45, 145, 245);
+    padding: 10px;
+}
+#personContainer label{
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    font-family: Work Sans, Roboto, sans-serif;
+}
+.personTitle {
+    text-align: center;
+    color: #002245;
+    font-size: 1.5em;
+    font-family: Work Sans, Roboto, sans-serif;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+/*  INDEX NAV IMAGES   */
+#indexnavimageContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    padding: 30px 0px;
+}
+#indexnavimageContainer img {
+    width: 175px;
+    height: 175px;
+    margin: 20px;
+}
+
+
+
+
+
+/*+++++++++++++++++++   INDEX NAV VIDEOS  +++++++++++++++++++*/
+#indexvideoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#indexvideoContainer p {
+    font-family: Work Sans, Roboto, sans-serif;
+    margin: 0%;
+    padding: 5px;
+}
+#indexvideoContainer div {
+    margin: 30px 0px;
+    background-color: lightgray;
+}
+    
+
+
+
+
+
+
+
+/*+++++++++++++++++++   FOOTER   +++++++++++++++++++*/
+
+footer {
+    border-top: rgb(45, 145, 245) solid 1px;
+    background-color: #002245;
+}
+
+#footerBox {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 20px;
+}
+#contacts img {
+    width: 30px;
+    height: 30pxs;
+    margin: 0px 5px;
+}
+#contacts p {
+    color: white;
+    margin: 5px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+}
+#creator p {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8em;
+    margin: 0%;
+    margin-top: 25px;
+    font-style: oblique;
+}
+
+
+
+
+
+
+
+
+
+/*   INDEX MODALS   */
+/*   INDEX MODALS   */
+/*   INDEX MODALS   */
+.modalWindow{
+    background-color: rgba(50, 50, 50, 0.6); 
+    position: fixed;
+    top: 0%; bottom: 0%; right: 0%; left: 0%;
+    display: none;
+}
+.modalBody{
+    width: 60%; 
+    margin: 8% auto; 
+    background-color: rgb(45, 145, 245);
+}
+.modalHeader{
+    height: 10%; 
+    background-color: #002245;
+    padding: 0.5em 1em;
+}
+.modalHeader a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+.modalInfo{
+    height: 70%; 
+    padding: 0.5em;
+}
+.modalInfo figure{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.modalInfo img {
+    display: block;
+    width: 35%;
+    margin: auto;
+    margin: 20px;
+    border: #002245 solid 2px;
+    border-radius: 5px;
+}
+.modalInfo figcaption {
+    color: #002245;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    width: 40%;
+    margin: 10px auto;
+}
+.modalInfo p {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;
+}
+
+.modalFooter{
+    height: 20%; 
+    background-color: #002245;
+    padding: 0px;
+}
+.modalFooter input{
+    width: 100%;
+    height: 100%;
+    padding: 5px 0px;
 }
 
 
@@ -218,6 +466,117 @@ body {margin: 0%;}
 
 
 
+/*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+/*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+/*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+
+/*+++++++++++++++++++   MEN LACROSSE BODY   +++++++++++++++++++*/
+#menlacrosseBody {background-color: #002245;}
+
+
+/*+++++++++++++++++++   MEN LACROSSE BANNER CAPTION   +++++++++++++++++++*/
+#menlacrossebannerCaption {
+    text-align: center;
+    font-family: Work Sans, Roboto, sans-serif;
+    color: white;
+    margin: 10px;
+    font-size: 4em;
+}
+
+
+/*+++++++++++++++++++   MEN LACROSSE PRODUCT CONTAINERS   +++++++++++++++++++*/
+#containertitleHolder {
+    display: block;
+}
+.productcontainerTitle {
+    color: white;
+    font-family: Work Sans, Roboto, sans-serif;
+    padding: 0px 10px;
+    margin: 0%;
+    margin-top: 10px;
+    display: inline-block;
+    border-bottom: 3px white solid;
+}
+#productcontainerHider { /* .chestHider */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    padding: 1px;
+    border-radius: 100%;
+}
+
+#productContainer {        /* hover / hide effects in java using class names */
+    background-color: white;  /* .chestContainer */
+    margin: 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+#productcontainerBanner {
+    flex: 100%;
+}
+
+#productContainer figure{
+    display: inline-block;
+    margin: 40px 80px;
+}
+#productContainer figure:hover{
+    box-shadow: 2px 2px 5px black;
+    padding: 5px;
+}
+#productContainer a{
+    text-decoration: none;
+    color: black;
+}
+#productContainer img{
+    width: 225px;
+    height: 225px;
+    /*   centering product images   */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#productContainer figcaption{
+    font-family: Roboto,sans-serif;
+    font-size: 0.9em;
+}
+
+#priceTag {
+    margin: 0%;
+    color: rgb(45, 145, 245);
+    font-family: Roboto,sans-serif;
+    font-weight: bolder;
+}
+
+
+
+
+/*LOLOLOLOLOLOLOLOLOLOLOLOLOL   THANK YOU    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+/*LOLOLOLOLOLOLOLOLOLOLOLOLOL   THANK YOU    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+/*LOLOLOLOLOLOLOLOLOLOLOLOLOL   THANK YOU    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+.thankHeader {
+    background-color: #002245;
+}
+.thankHeader h1 {
+    text-align: center;
+    font-family: Work Sans, Roboto, sans-serif;
+    color: white;
+    font-style: italic;
+    background-color: #002245;
+    margin: 0%;
+    padding: 15px 0px;
+}
+.msgSection p {
+    text-align: center;
+    padding: 20px 30px;
+    font-family: Work Sans, Roboto, sans-serif;
+    font-size: 2em;
+}
+.blankSpace {
+    height: 500px;
+}
 
 
 
@@ -227,10 +586,16 @@ body {margin: 0%;}
 
 
 
-
-
-
-
+/*+++++++++++++++++++   1291px RESPONSIVE : regular monitor  +++++++++++++++++++*/
+@media only screen and (max-width: 1291px) {
+  
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+    /*   product spacing   */
+    #productContainer figure{
+        margin: 40px 50px;
+    }
+}
 
 
 
@@ -249,21 +614,50 @@ body {margin: 0%;}
         right: 0;
         margin: auto;
     }
+
+    /*   modals   */
+    .modalInfo img {
+        width: 50%;
+        margin: auto;
+    }
+    .modalInfo figcaption {
+        font-size: 0.8em;
+        display: block;
+        flex: 100%;
+        margin: 10px 10px;
+    }
+
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+
+    /*   product img size   */
+    #productContainer img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #menlacrossebannerCaption {
+        font-size: 3em;
+    }
+
 }
 
-/*+++++++++++++++++++   850px RESPONSIVE : regular monitor  +++++++++++++++++++*/
-@media only screen and (max-width: 850px) {
+
+
+/*+++++++++++++++++++   860px RESPONSIVE : regular monitor  +++++++++++++++++++*/
+@media only screen and (max-width: 860px) {
     /*==   INDEX HEADER   ==*/
     #headerText {font-size: 0.9em;}
+
 }
 
 
 
 /*+++++++++++++++++++   770px RESPONSIVE : tablets   +++++++++++++++++++*/
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 780px) {
 
     /*==   INDEX HEADER   ==*/
-    #headerText {font-size: 0.8em; display: inline-block;}
+    #indexHeader {display: none;}
 
     /*=================   INDEX LOGO / TOP-EMAIL / CART   =================*/
     #indexTop {
@@ -294,14 +688,31 @@ body {margin: 0%;}
         width: 50px;
         height: 50px;
     }
+
+
 }
+
+
 
 /*+++++++++++++++++++   680px RESPONSIVE : indexHeader gone   +++++++++++++++++++*/
 @media only screen and (max-width: 680px) {
 
-    /*==   INDEX HEADER   ==*/
-    #indexHeader {display: none;}
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+
+    /*   mens lacrosse banner text size*/
+    #menlacrossebannerCaption {
+        font-size: 2.5em;
+    }
+
+    /*   product spacing   */
+    #productContainer figure{
+        margin: 40px 20px;
+    }
+
 }
+
+
 
 /*+++++++++++++++++++   600px RESPONSIVE : INDEX NAV GONE => HAMBURGER   +++++++++++++++++++*/
 @media only screen and (max-width: 600px) {
@@ -320,8 +731,69 @@ body {margin: 0%;}
         border-top: rgb(45, 145, 245) solid 1px;
     }
     #indexslideTop p {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
+
+
+   /*=================   INDEX SLIDE IMAGE REPLACEMENT   =================*/
+   .indexslideImg1 {
+        content: url("images/indexslideShow/thickindexSlide1.jpg");
+    } 
+    .indexslideImg2 {
+        content: url("images/indexslideShow/thickindexSlide2.png");
+    } 
+    .indexslideImg3 {
+        content: url("images/indexslideShow/thickindexSlide3.jpg");
+    } 
+    .indexslideImg4 {
+        content: url("images/indexslideShow/thickindexSlide4.jpg");
+    } 
+    .indexslideImg5 {
+        content: url("images/indexslideShow/thickindexSlide5.jpg");
+    }
+    .indexslideImg6 {
+        content: url("images/indexslideShow/thickindexSlide6.jpg");
+    } 
+    .indexslideImg7 {
+        content: url("images/indexslideShow/thickindexSlide7.jpg");
+    }  
+
+
+
+    .modalInfo figcaption {
+        font-size: 0.8em;
+        display: block;
+        flex: 100%;
+        margin: 10px 10px;
+    }
+}
+
+
+
+/*+++++++++++++++++++   440px RESPONSIVE :  SHRINKING MENS LACROSSE BANNER / product container title   +++++++++++++++++++*/
+@media only screen and (max-width: 440px) {
+
+    /*=================   INDEX NAV IMAGE SIZES   =================*/
+    #indexnavimageContainer img {
+        width: 130px;
+        height: 130px;
+        margin: 20px 0px;
+    }
+    
+
+
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+    /*LOLOLOLOLOLOLOLOLOLOLOLOLOL   MENS LACROSSE    OLOLOLOLOLOLOLOLOLOLOLOOLOLO*/
+
+    /*men lacrosse Banner*/
+    #menlacrosseBanner {
+        display: none;
+    }
+
+    /*   mens lacrosse banner text size*/
+    #menlacrossebannerCaption {
+        font-size: 1.75em;
+    }
 
 }

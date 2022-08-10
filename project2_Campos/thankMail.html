@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Thank you!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+</head>
+
+
+<body>
+
+    <!--+++++++++++++++++++   BACK TO TOP BUTTON   +++++++++++++++++++-->
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+
+
+    <!--+++++++++++++++++++   INDEX HEADER   +++++++++++++++++++-->
+    <header id="indexHeader">
+        <p id="headerText">Free Shipping on Orders Over $99   |   <a id="headerCashBack" href="https://www.w3schools.com/tags/tag_a.asp">3% Cash Back Rewards!</a></p>
+        <button id="indexhideHeader">&#10060</button>
+    </header>
+
+
+    <!--+++++++++++++++++++   INDEX LOGO / LOGIN / CART   +++++++++++++++++++-->
+    <section id="indexTop">
+        <div id="indexTopLinks">
+            <a id="indexTopLoginLink" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1"><figure id="indexTopLogin">
+                <img src="images/topImages/helmet.png" alt="Icon of a Men's Lacrosse helmet" title="Icon of a Men's Lacrosse helmet">
+                <figcaption>LOGIN</figcaption>
+            </figure></a>
+        
+            <a id="indexTopCartLink" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1"><figure id="indexTopCart">
+                <img src="images/topImages/cart.png" alt="Icon of a Shopping Cart" title="Icon of a Shopping Cart">
+                <figcaption>CART</figcaption>
+            </figure></a>
+        </div>
+        <a href="index.html"><img id="indexLogo" src="images/topImages/logo.png" alt="Atomic Lacrose Logo" title="Atomic Lacrosse Logo"></a>
+    </section>
+
+
+    <!--+++++++++++++++++++   INDEX HAMBURGER   +++++++++++++++++++-->
+    <section id="hamburgerBar">
+        <img id="hamburgerIcon" src="images/topImages/hamburger.png" alt="Hamburger Icon Menu" title="Hamburger Menu Icon">
+    </section>
+
+
+
+    <!--+++++++++++++++++++   INITIAL INDEX ICONS   +++++++++++++++++++-->
+    <section id="indexiconNav">
+        <figure><a href="index.html">
+            <img src="images/topImages/runBack.png" alt="Back Arrow Icon" title="Back Arrow Icon">
+            <figcaption>Main Page</figcaption>
+        </a></figure>
+    </section>
+
+
+
+
+
+
+
+
+
+    <header class="thankHeader">
+        <h1>Thank You For Subscribing! <span id="storedFN"></span> <span id="storedLN"></span></h1>
+    </header>
+
+
+    <section class="msgSection">
+        <p> We will constantly update you at <span id="storedUM"></span>, about any deals that come up in the sections you chose!</p>
+    </section>
+
+    <section class="blankSpace"></section>
+
+
+
+
+
+
+    <footer>
+        <section id="footerBox">
+            <div id="contacts">
+                <p>Call Us: 1 - (855) 255 5294 </p>
+                <p>Follow us on social media:</p>
+                <a href="https://www.facebook.com/lax" target="_blank"><img src="images/footerImages/fbIcon.png" alt="Facebook Icon" title="Facebook Icon"></a>
+                <a href="https://www.instagram.com/laxdotcom/?ref=badge" target="_blank"><img src="images/footerImages/igIcon.png" alt="Instagram Icon" title="Instagram Icon"></a>
+                <a href="https://www.tiktok.com/@laxdotcom" target="_blank"><img src="images/footerImages/tikIcon.png" alt="TikTok Icon" title="TikTok Icon"></a>
+                <a href="https://twitter.com/laxdotcom" target="_blank"><img src="images/footerImages/twIcon.png" alt="Twitter Icon" title="Twitter Icon"></a>
+                <a href="https://www.youtube.com/LAXdotCOMtv" target="_blank"><img src="images/footerImages/ytIcon.png" alt="YouTube Icon" title="YouTube Icon"></a>
+            </div>
+
+
+            <div id="creator">
+                <p>Atomic Lacrosse Ecomm Web Page @ Created by Daniel Campos Perez 2022</p>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        const storedFN = document.querySelector(`#storedFN`)
+        const storedLN = document.querySelector(`#storedLN`)
+        const storedUM = document.querySelector(`#storedUM`)
+
+        storedFN.innerHTML = localStorage.getItem(`FN`)
+        storedLN.innerHTML = localStorage.getItem(`LN`)
+        storedUM.innerHTML = localStorage.getItem(`UM`)
+    </script>
+</body>
+</html>
